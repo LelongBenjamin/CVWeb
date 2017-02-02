@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>MyCV</title>
+
+	<link rel="stylesheet" type="text/css" href="documents/style.css">
+
+	<script type="text/javascript">
+		function changerVue(id) {
+			document.getElementById("vue").innerHTML = document.getElementById(id).innerHTML;
+		}
+	</script>
+</head>
+
+<body onload='changerVue("Home")''>
+
+<nav>
+	<ul>
+		<li><a onclick="changerVue('Home')">Home</a></li>
+		<li><a onclick="changerVue('Etude')">Etude</a></li>
+		<li><a>Eperience</a></li>
+		<li><a>competance</a></li>
+	</ul>
+</nav>
+ 
+<section id="vue"></section>
+
+</body>
+
+<section hidden id="Home">
+	<div class="subTitle">
+		<h1>Présentation</h1>
+		<p>"Qui suis je ?, une quetion complique ou pas ."</p>
+	</div>
+	<div>
+		<ul>
+			<li>Meusieur</li>
+			<li>LELONG Benjamin</li>
+			<li>né le 9/03/1996 (20 ans)</li>
+			<li>Français</li>
+			<li>06 35 66 54 29</li>
+			<li>lelongben50@outlook.fr</li>
+			<li>66 rue Eugène poret, 59190 Hazebrouck</li>
+		</ul>  	
+	</div>
+</section>
+
+<section hidden id="Etude">
+	<div class="subTitle">
+		<h1>Etude</h1>
+	</div>
+	<div>
+		<ul>
+			<li>DUT : Informatique</li>
+			<ul>
+				<li>IUT A Lille (France)</li>
+				<li>de 2015 - en cours</li>
+			</ul>
+			
+			<li>BAC STI2D</li>
+			<ul>
+				<li>EPID, Dunkerque (France)</li>
+				<li>2012 - 2015</li>
+				<li>Option SIN ( Système d'Information et Numérique )</li>
+				<li>Mention très bien</li>
+			</ul>
+
+			<li>FMIR : Formation Militaire Initiale de Réserve</li>
+			<ul>
+				<li>PSE1</li>
+			</ul>
+		</ul>
+	</div>
+</section>
+
+</html>
