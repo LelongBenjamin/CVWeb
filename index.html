@@ -5,20 +5,18 @@
 	<meta charset="utf-8">
 	<title>MyCV</title>
 
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-	<script type="text/javascript">
-		function changerVue(id) {
-			document.getElementById("vue").innerHTML = document.getElementById(id).innerHTML;
-		}
-	</script>
+	<!-- import FramWork meterializeCSS-->
+	<link rel="stylesheet" href="css/materialize.min.css">
+	
+	<!-- import des icon GoogleStyle (meterializeCSS)-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body onload='changerVue("Home")' class='container'>
 
 <nav class='grey'>
 	<ul>
-		<li><a onclick="changerVue('Home')">Home</a></li>
+		<li><a href="#home">Home</a></li>
 		<li><a onclick="changerVue('Etude')">Etude</a></li>
 		<li><a>Eperience</a></li>
 		<li><a>competance</a></li>
@@ -27,53 +25,41 @@
 
 <section>
 	<article>
+	<div id="home" class="scale-transition">
 		<h1>bienvenu !</h1>
 		<p>sur mon CV en ligne</p>
+	</div>
 	</article>
 </section>
  
-<section>
-	<div>
+<ul style="opacity: 0;">
+	<li>
 		<h1>Présentation</h1>
 		<p>"Qui suis je ?, une petit présentation vous permetra de vous faire un idée ."</p>
-	</div>
-	<div >
-    	<img src=""documents/logo-homme.jpg"">
-    	Jane Doe
-  	</div>
-	<div>
-		<ul>
-			<li>Meusieur</li>
-			<li>LELONG Benjamin</li>
-			<li>né le 9/03/1996 (20 ans)</li>
-			<li>Français</li>
-			<li>06 35 66 54 29</li>
-			<li>lelongben50@outlook.fr</li>
-			<li>66 rue Eugène poret, 59190 Hazebrouck</li>
-		</ul>  	
-	</div>
-</section>
-
-<section  id="Etude">
-	<div>
-		<h1>Etude</h1>
-	</div>
-	<div>
-		<ul>
-			<li>DUT : Informatique</li>
-			<li>IUT A Lille (France)</li>
-			<li>de 2015 - en cours</li>
-			<li>BAC STI2D</li>
-			<li>EPID, Dunkerque (France)</li>
-			<li>2012 - 2015</li>
-			<li>Option SIN ( Système d'Information et Numérique )</li>
-			<li>Mention très bien</li>
-			<li>FMIR : Formation Militaire Initiale de Réserve</li>
-			<li>PSE1</li>
-		</ul>
-	</div>
-</section>
+	</li>
+	
+	<li>
+		<h2>Benjamin LELONG</h2>
+		<div class="chip">
+			<i class="tiny material-icons">location_on</i>
+			66 rue Eugène poret, 59190 Hazebrouck
+		</div></br>
+		<div class="chip">
+			<i class="tiny material-icons">email</i>
+			lelongben50@outlook.fr
+		</div></br>
+		<div class="chip">
+			<i class="tiny material-icons">phone</i>
+			06 35 66 54 29
+		</div></br>
+		<div class="chip">
+			<i class="tiny material-icons">language</i>
+			Français
+		</div>	 	
+	</li>
+</ul>
 
 </body>
+
 
 </html>
