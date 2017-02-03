@@ -10,56 +10,86 @@
 	
 	<!-- import des icon GoogleStyle (meterializeCSS)-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<style type="text/css">
+		h1, h2 {
+			font-size: 200%;
+			padding: 0px  0px 0px 0px;
+		}
+		h1 {
+			text-align: center;
+		}
+	</style>
 </head>
 
-<body onload='changerVue("Home")' class='container'>
+<body onload='changerVue("home")' class='container'>
 
-<nav class='grey'>
-	<ul>
-		<li><a href="#home">Home</a></li>
-		<li><a onclick="changerVue('Etude')">Etude</a></li>
-		<li><a>Eperience</a></li>
-		<li><a>competance</a></li>
-	</ul>
-</nav>
+<img class="responsive-img" src="documents/banier-Home.jpg">
 
-<section>
-	<article>
-	<div id="home" class="scale-transition">
+<header>
+	<nav class='light-blue lighten-1'>
+
+		<ul>
+			<li><a onclick="changerVue('home')"><i class="large material-icons">home</i></a></li>
+			<li><a onclick="changerVue('pres')">INFO</a></li>
+			<li><a onclick="changerVue('etude')">Etude</a></li>
+			<li><a>Eperience</a></li>
+			<li><a>competance</a></li>
+		</ul>
+	</nav>	
+</header>
+
+<section id="vue" class="card-panel scale-transition light-blue lighten-3 flow-texts"></section>
+
+<section id="home" class="hide">
+	<article class="scale-transition card-panel">
 		<h1>bienvenu !</h1>
 		<p>sur mon CV en ligne</p>
-	</div>
-	</article>
+	</article>	
 </section>
  
-<ul style="opacity: 0;">
-	<li>
+<section id="pres" class="hide">
+	<article class="row card-panel">
 		<h1>Présentation</h1>
 		<p>"Qui suis je ?, une petit présentation vous permetra de vous faire un idée ."</p>
-	</li>
+	</article>
+
+	<div class="row card-panel">
+		<div class="col s4"><img src="documents/me.jpg" class="responsive-img circle"></div>
+
+		<div class="col s8">
+			<h2>Benjamin LELONG</h2>
+			<div class="chip">
+				<i class="tiny material-icons">location_on</i>
+				66 rue Eugène poret, 59190 Hazebrouck
+			</div></br>
+			<div class="chip">
+				<i class="tiny material-icons">email</i>
+				lelongben50@outlook.fr
+			</div></br>
+			<div class="chip">
+				<i class="tiny material-icons">phone</i>
+				06 35 66 54 29
+			</div></br>
+			<div class="chip">
+				<i class="tiny material-icons">language</i>
+				Français
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="etude" class="hide">
 	
-	<li>
-		<h2>Benjamin LELONG</h2>
-		<div class="chip">
-			<i class="tiny material-icons">location_on</i>
-			66 rue Eugène poret, 59190 Hazebrouck
-		</div></br>
-		<div class="chip">
-			<i class="tiny material-icons">email</i>
-			lelongben50@outlook.fr
-		</div></br>
-		<div class="chip">
-			<i class="tiny material-icons">phone</i>
-			06 35 66 54 29
-		</div></br>
-		<div class="chip">
-			<i class="tiny material-icons">language</i>
-			Français
-		</div>	 	
-	</li>
-</ul>
+</section>
 
+<!-- import JS -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+    	function changerVue(vueVisible) {
+    		document.getElementById("vue").innerHTML = document.getElementById(vueVisible).innerHTML;
+    	}
+    </script>
 </body>
-
-
 </html>
