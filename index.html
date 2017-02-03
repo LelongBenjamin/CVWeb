@@ -12,53 +12,71 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<style type="text/css">
-		h1, h2 {
-			font-size: 200%;
-			padding: 0px  0px 0px 0px;
-		}
-		h1 {
-			text-align: center;
+		.margPad{
+			margin-left: 0%;
+			margin-right: 0%;
+			margin-top: 0%;
+			margin-bottom: 0%;
+			padding-top: 0%;
+			padding-bottom: 0%;
+			padding-left: 0%;
+			padding-right: 0%;
 		}
 	</style>
 </head>
 
-<body onload='changerVue("home")' class='container'>
+<body onload="changerVue('home')" class="container blue-grey darken-4">
 
-<img class="responsive-img" src="documents/banier-Home.jpg">
+	<!-- corp visible -->
 
-<header>
-	<nav class='light-blue lighten-1'>
+	<div class="row margPad">
+		<div class="card margPad">
+			
+			<div id="titre" class="card-image"></div>
 
-		<ul>
-			<li><a onclick="changerVue('home')"><i class="large material-icons">home</i></a></li>
-			<li><a onclick="changerVue('pres')">INFO</a></li>
-			<li><a onclick="changerVue('etude')">Etude</a></li>
-			<li><a>Eperience</a></li>
-			<li><a>competance</a></li>
-		</ul>
-	</nav>	
-</header>
+			<nav class='light-blue lighten-1'>
+				<ul>
+					<li><a onclick="changerVue('home')"><i class="large material-icons">home</i></a></li>
+					<li><a onclick="changerVue('contact')">Contact</a></li>
+					<li><a onclick="changerVue('etude')">Etude</a></li>
+					<li><a onclick="changerVue('exp')">Eperience</a></li>
+					<li><a>competance</a></li>
+				</ul>
+			</nav>	
+		</div>	
 
-<section id="vue" class="card-panel scale-transition light-blue lighten-3 flow-texts"></section>
+		<div id="vue" class="col s12"></div>
+	</div>
+	<!-- corp visible -->
+
+<div id="home-titre" class="hide">
+	<img class="responsive-img" src="documents/home.jpg">
+	<span class="card-title"><h1>bienvenu !</h1></span>
+</div>
 
 <section id="home" class="hide">
-	<article class="scale-transition card-panel">
-		<h1>bienvenu !</h1>
-		<p>sur mon CV en ligne</p>
+	<article class="row card-panel">
+		<p>Étudiant en D.U.T Informatique au sein de l'I.U.T A ( Université de Lille 1) , je suis à la
+recherche d'un stage professionnalisant d'une durée de 3 mois me permettant de valider mon
+diplôme et d'entrer dans le monde du travail et votre offre a retenu toute mon attention</p>
+<p>Énergique et passionné par l'informatique et plus spécialement par la programmation,
+mon parcours scolaire orienté technologique m'a offert l'opportunité de réaliser de nombreux
+projets dans lesquels j'ai pu acquérir des méthodes de travail telles que la gestion de planning,
+l'utilisation du diagramme de Gantt et de l' UML, la méthode agile et bien sûr le travail en équipe
+qui est renforcé par mon expérience de réserviste dans l'armée de terre .</p>
+<p>De plus toujours grâce à mon parcours et à ma capacité d’autonomie, j'ai pu acquérir un
+large panel de technologies de développement et de langages de programmation ainsi qu'une
+expérience dans le dépannage informatique et la création de contenu multimédia .</p>
+
 	</article>	
 </section>
  
-<section id="pres" class="hide">
-	<article class="row card-panel">
-		<h1>Présentation</h1>
-		<p>"Qui suis je ?, une petit présentation vous permetra de vous faire un idée ."</p>
-	</article>
-
+<section id="contact" class="hide">
 	<div class="row card-panel">
 		<div class="col s4"><img src="documents/me.jpg" class="responsive-img circle"></div>
 
 		<div class="col s8">
-			<h2>Benjamin LELONG</h2>
+			<h2>Mr Benjamin LELONG</h2>
 			<div class="chip">
 				<i class="tiny material-icons">location_on</i>
 				66 rue Eugène poret, 59190 Hazebrouck
@@ -79,17 +97,19 @@
 	</div>
 </section>
 
-<section id="etude" class="hide">
-	
-</section>
-
 <!-- import JS -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript">
     	function changerVue(vueVisible) {
     		document.getElementById("vue").innerHTML = document.getElementById(vueVisible).innerHTML;
+    		if (vueVisible == "home") {
+    			document.getElementById("titre").innerHTML = document.getElementById(vueVisible + "-titre").innerHTML;
+    		}else{
+    			document.getElementById("titre").innerHTML = "";
+    		}
     	}
     </script>
+
 </body>
 </html>
